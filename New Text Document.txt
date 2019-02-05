@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i,j,l,r,e,c,k=0,m,n=0;
+    printf("Input the text of keybord\n");
+    char text[25];
+    gets(text);
+    l=strlen(text);
+    printf(" consider the key size\n");
+    scanf("%d",&c);
+    int x=l/c;
+    if(l%c!=0){
+             e=l%c;
+        r=x+1;}
+        else{
+            r=x;}
+
+     //      printf("filler charecter number%d:",e);
+
+char as[r][c];
+    for (i=0;i<r;i++){
+        for (j=0;j<c;j++){
+            as[i][j]=text[k];
+            k++;
+            if(k>l){
+              as[i][j]='#';
+            }
+    }
+    }
+    printf("\n");
+   for (i=0;i<r;i++){
+        for (j=0;j<c;j++){
+                printf("%c ",as[i][j]);
+                }
+                printf("\n");
+        }
+
+
+    return 0;
+}

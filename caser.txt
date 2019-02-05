@@ -1,0 +1,70 @@
+#include<stdio.h>
+int main()
+
+{
+    int i,value,k;
+    printf("Input the text\n");
+    char c[17];
+    gets(c);
+    printf("Input the number of 'k'value\n");
+    scanf("%d",&k);
+
+    printf("Input the positive operation value: =1\n");
+    printf("Input the negative operation value: =2\n");
+    scanf("%d",&value);
+
+    switch(value){
+    case 1:{
+    for (i=0;i<strlen(c);i++){
+        c[i]=c[i]+k;
+                if(c[i]==32+k){
+                    c[i]=32;
+                }
+                if(c[i]>122){
+            c[i]=c[i]-122+96;
+        }
+    }
+    puts(c);
+   for (i=0;i<strlen(c);i++){
+        c[i]=c[i]-k;
+                if(c[i]==32-k){
+                    c[i]=32;
+                }
+                if(c[i]>122){
+            c[i]=c[i]-122+96;
+        }
+    }
+       puts(c);
+       break;
+    }
+
+    case 2:{ for(i=0;i<=25;i++) {
+           for (i=0;i<strlen(c);i++){
+        c[i]=c[i]-k;
+                if(c[i]==32-k){
+                    c[i]=32;
+                }
+                if(c[i]>122){
+            c[i]=c[i]-122+96;
+        }
+    }
+    puts(c);
+    for (i=0;i<strlen(c);i++){
+        c[i]=c[i]+k;
+                if(c[i]==32+k){
+                    c[i]=32;
+                }
+                if(c[i]>122){
+            c[i]=c[i]-122+96;
+        }
+    }
+       puts(c);
+           break;
+    }
+
+    }
+
+    }
+    return 0;
+}
+

@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+char text[100];
+char c;
+char s;
+int i;
+int key;
+
+printf("give your text:");
+gets(text);
+
+s=strlen(text);
+
+for(key=1;key<=25;key++)
+{
+  for(i=0;i<s;i++)
+    {
+        c=text[i];
+         if(c>='a' && c<='z')
+           {
+            c=c-1;
+            if(c<'a')
+            {
+            c=c+'z'-'a'+1;
+            }
+        }
+    text[i]=c;
+   }
+    printf("Decrypt :%s\n",text);
+}
+  return 0;
+}
